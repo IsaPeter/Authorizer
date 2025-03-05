@@ -52,7 +52,7 @@ Replay Sending Options:
 
 Run the script with different authentication and request replay options.
 
-**Replay the whole set of requests without modification**
+### Replay the whole set of requests without modification
 
 ```bash
 python authorizer.py -r /path/to/burp_requests --replay
@@ -84,6 +84,12 @@ Or place the token in text file and read pass it to the script
 
 ```bash
 python authorizer.py -r burp_requests -bf bearer_file 
+```
+
+### Set Custom Cookie Values
+
+```bash
+python authorizer.py -r burp_requests --cookie "sessionId=<value>; foo=bar; bar=baz"
 ```
 
 ### Remove Authorization & Cookie Headers
